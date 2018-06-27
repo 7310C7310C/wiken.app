@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html id="top">
+    
+    <head>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+        <script type="text/javascript">function post(url, params) {
+                var temp = document.createElement("form");
+                temp.action = url;
+                temp.method = "post";
+                temp.style.display = "none";
+                for (var x in params) {
+                    var opt = document.createElement("textarea");
+                    opt.name = x;
+                    opt.value = params[x];
+                    temp.appendChild(opt);
+                }
+                document.body.appendChild(temp);
+                temp.submit();
+                return temp;
+            }</script>
+        <script type="text/javascript">function scroll(id) {
+                $('#modal1').modal('close');
+                $('html,body').animate({
+                    scrollTop: $('#' + id).offset().top
+                },
+                500);
+            }</script>
+        <title>搜索结果 - 轻淘宝</title>
+        <link href="https://wiken.app/static/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css" media="screen,projection" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /></head>
+    
+    <body>
+        <nav class="orange darken-4">
+            <div class="nav-wrapper">
+                <a href="http://wiken.app" class="brand-logo center waves-effect waves-light"><i class="material-icons">shopping_cart</i>轻淘宝</a>
+                <ul id="nav-mobile" class="left">
+                    <li>
+                        <a href="http://wiken.app" class="waves-effect waves-light">首页</a></li>
+                </ul>
+                <ul id="nav-mobile" class="right">
+                    <li>
+                        <a href="http://wiken.top" target="_blank" class="waves-effect waves-light">博客</a></li>
+                    <li>
+                        <a href="https://github.com/7310C7310C" target="_blank" class="waves-effect waves-light">GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="fixed-action-btn">
+            <a href="javascript:scroll('top')" class="btn-floating btn-large red">
+                <i class="large material-icons">expand_less</i></a>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel indigo lighten-5 hoverable">
+                    <div class="row">
+                        <form class="col s12" action="{{ url_for('results') }}" method="post">
+                            <div class="row">
+                                <div class="input-field col s12 m8 offset-m2 l6 offset-l3">
+                                    <input id="keyword_orUrl" type="text" name="keyword_orUrl" class="validate">
+                                    <label for="keyword_orUrl">请输入关键词</label>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">搜索
+                                        <i class="material-icons right">search</i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-panel amber hoverable">
+                    <div class="row">{% if shopLink|count == 0 %}
+                        <div class="col s12 m8 offset-m2 l6 offset-l3">
+                            <div class="card-panel grey lighten-5 z-depth-1 hoverable">
+                                <div class="row valign-wrapper">
+                                    <div class="col s12 flow-text">无结果，开始新的搜索吧！</div></div>
+                            </div>
+                        </div>{% endif %}{% for i in range(shopLink|count) %}
+                        <div class="col s12 m8 offset-m2 l6 offset-l3">
+                            <div class="card-panel grey lighten-5 z-depth-1 hoverable">
+                                <div class="row valign-wrapper">
+                                    <div class="col s4">
+                                        <a href="https:{{ detail_url[i] }}" target="_blank">
+                                            <img src="https:{{ pic_url[i] }}" alt="" class="responsive-img"></a></div>
+                                    <div class="col s8">
+                                        <p class="black-text flow-text">
+                                            <a href="https:{{ detail_url[i] }}" target="_blank">{{ title[i][0:30] }}</a></p>
+                                        <p class="red-text flow-text">
+                                            <span>¥ {{ price[i] }}</span>
+                                            <span class="new badge blue" data-badge-caption="">{{ sales[i] }}</span></p>
+                                        <p class="black-text">
+                                            <span>
+                                                <a href="https:{{ shopLink[i] }}" target="_blank">{{ shop[i] }}</a></span>
+                                            <span class="new badge teal" data-badge-caption="">{{ location[i] }}</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>{% endfor %}
+                        <div class="col s12 m8 offset-m2 l6 offset-l3">
+                            <div class="card-panel grey lighten-5 z-depth-1 hoverable">
+                                <div class="row valign-wrapper">
+                                    <a href="javascript:;" onclick="javascript:post('http://wiken.app/results', {keyword_orUrl:'{{ url }}'})">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">下一页
+                                            <i class="material-icons right">send</i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-panel indigo lighten-5 hoverable">
+                    <div class="row">
+                        <form class="col s12" action="{{ url_for('results') }}" method="post">
+                            <div class="row">
+                                <div class="input-field col s12 m8 offset-m2 l6 offset-l3">
+                                    <input id="keyword_orUrl" type="text" name="keyword_orUrl" class="validate">
+                                    <label for="keyword_orUrl">请输入关键词</label>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">搜索
+                                        <i class="material-icons right">search</i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

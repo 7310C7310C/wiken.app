@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html id="顶部">
+
+<head>
+    <title>花花旅游在线</title>
+    <link rel="shortcut icon" href="/static/img/y2.gif" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <!--谷歌字体-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').carousel();
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true
+            });
+            $('.collapsible').collapsible();
+            $('select').material_select();
+            $('.datepicker').pickadate({
+                selectMonths: true,
+                selectYears: 17
+            });
+            $('ul.tabs').tabs({
+                swipeable: true
+            });
+            $('.slider').slider({
+                height: 190,
+                interval: 1500
+            });
+            $('.modal').modal();
+        });
+
+    </script>
+    <script>
+        function scroll(id) {
+            $('#modal1').modal('close');
+            $('html,body').animate({
+                scrollTop: $('#' + id).offset().top
+            }, 500);
+        }
+
+    </script>
+    <!--固定按钮-->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large waves-effect waves-light red hoverable" href="#modal1"><i class="material-icons">add</i></a>
+    </div>
+    <!--固定按钮结束-->
+    <!-- 模态 -->
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <div class="collection">
+                <a href="javascript:scroll('顶部')" class="collection-item center">回到顶部</a>
+                <a href="javascript:scroll('快捷搜索')" class="collection-item center">快捷搜索</a>
+                <a href="javascript:scroll('精品推荐')" class="collection-item center">精品推荐</a>
+                <a href="javascript:scroll('特色线路')" class="collection-item center">特色线路</a>
+                <a href="javascript:scroll('友情链接')" class="collection-item center">友情链接</a>
+                <a href="javascript:scroll('关于我们')" class="collection-item center">关于我们</a></div>
+        </div>
+    </div>
+    <!-- 模态结束 -->
+    <!--导航栏-->
+    <nav class="indigo darken">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo waves-effect waves-light"><img src="/static/img/nav.png"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="#!" class="waves-effect waves-light">首页</a></li>
+                <li>
+                    <a href="#!" class="waves-effect waves-light">精品推荐
+              <span class="new badge blue" data-badge-caption="">HOT</span></a>
+                </li>
+                <li>
+                    <a href="#!" class="waves-effect waves-light">旅游快讯</a></li>
+                <li>
+                    <a href="#!" class="waves-effect waves-light">特色线路
+              <span class="new badge purple" data-badge-caption="">NEW</span></a>
+                </li>
+                <li>
+                    <a href="#!" class="waves-effect waves-light">特色景点</a></li>
+                <li>
+                    <a href="#!" class="waves-effect waves-light">特色美食</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--导航栏结束-->
+    <!--第零 row-->
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel indigo lighten-3 hoverable">
+                <div class="row">
+                    <!--左菜单-->
+                    <div class="col s12 m3">
+                        <ul class="collapsible hoverable" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header">市内旅游</div>
+                                <div class="collapsible-body">
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item active waves-effect waves-light">热门类目</a>
+                                        <a href="#!" class="collection-item waves-effect">广场游</a>
+                                        <a href="#!" class="collection-item waves-effect">滨海游</a>
+                                        <a href="#!" class="collection-item waves-effect">公园游</a>
+                                        <a href="#!" class="collection-item waves-effect">老建筑游</a>
+                                        <a href="#!" class="collection-item waves-effect">特色景点游</a>
+                                        <a href="#1活动推荐" class="collection-item active waves-effect waves-light pulse blue">活动推荐</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div id="1活动推荐" class="modal">
+                                <div class="modal-content">
+                                    <h5>活动推荐</h5>
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item waves-effect">[精品路线] 旅顺、金石滩、环市、发现王国纯玩四日游</a>
+                                        <a href="#!" class="collection-item waves-effect">[优惠活动] 老虎滩海洋公园一日游</a>
+                                        <a href="#!" class="collection-item waves-effect">[特价活动] 发现王国荧光夜跑第二季(时间+费用+路线)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>
+                                <div class="collapsible-header">海岛度假</div>
+                                <div class="collapsible-body">
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item active waves-effect waves-light">热门类目</a>
+                                        <a href="#!" class="collection-item waves-effect">海王九岛</a>
+                                        <a href="#!" class="collection-item waves-effect">旅顺蛇岛</a>
+                                        <a href="#!" class="collection-item waves-effect">棒槌岛</a>
+                                        <a href="#!" class="collection-item waves-effect">海猫岛</a>
+                                        <a href="#!" class="collection-item waves-effect">獐子岛</a>
+                                        <a href="#2活动推荐" class="collection-item active waves-effect waves-light pulse blue">活动推荐</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div id="2活动推荐" class="modal">
+                                <div class="modal-content">
+                                    <h5>活动推荐</h5>
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item waves-effect">[精品路线] 海参采捕-深海野生海参</a>
+                                        <a href="#!" class="collection-item waves-effect">[优惠活动] 客船--皮口港到各个海岛客</a>
+                                        <a href="#!" class="collection-item waves-effect">[特价活动] 塞里岛--沙滩干净，海水干</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>
+                                <div class="collapsible-header">近郊旅游</div>
+                                <div class="collapsible-body">
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item active waves-effect waves-light">热门类目</a>
+                                        <a href="#!" class="collection-item waves-effect">旅顺</a>
+                                        <a href="#!" class="collection-item waves-effect">普兰店</a>
+                                        <a href="#!" class="collection-item waves-effect">庄河</a>
+                                        <a href="#!" class="collection-item waves-effect">金州</a>
+                                        <a href="#!" class="collection-item waves-effect">瓦房店</a>
+                                        <a href="#3活动推荐" class="collection-item active waves-effect waves-light pulse blue">活动推荐</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div id="3活动推荐" class="modal">
+                                <div class="modal-content">
+                                    <h5>活动推荐</h5>
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item waves-effect">[精品路线] 旅顺</a>
+                                        <a href="#!" class="collection-item waves-effect">[优惠活动] 老虎滩海洋公园一日游</a>
+                                        <a href="#!" class="collection-item waves-effect">[特价活动] 发现王国荧光夜跑第二季(时间+费用+路线)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>
+                                <div class="collapsible-header">特价线路</div>
+                                <div class="collapsible-body">
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item active waves-effect waves-light">热门类目</a>
+                                        <a href="#!" class="collection-item waves-effect">市内一日游</a>
+                                        <a href="#!" class="collection-item waves-effect">历史遗迹</a>
+                                        <a href="#!" class="collection-item waves-effect">红海滩风景</a>
+                                        <a href="#!" class="collection-item waves-effect">冰峪沟</a>
+                                        <a href="#!" class="collection-item waves-effect">金石滩</a>
+                                        <a href="#!" class="collection-item waves-effect">深海露营</a>
+                                        <a href="#4活动推荐" class="collection-item active waves-effect waves-light pulse blue">活动推荐</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div id="4活动推荐" class="modal">
+                                <div class="modal-content">
+                                    <h5>活动推荐</h5>
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item waves-effect">[精品路线] 历史遗迹旅顺品质一日游</a>
+                                        <a href="#!" class="collection-item waves-effect">[优惠活动] 老虎滩海洋公园一日游</a>
+                                        <a href="#!" class="collection-item waves-effect">[特价活动] 金石滩5A级休闲纯玩一日游</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>
+                                <div class="collapsible-header">主题旅游</div>
+                                <div class="collapsible-body">
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item active waves-effect waves-light">热门类目</a>
+                                        <a href="#!" class="collection-item waves-effect">历史遗迹</a>
+                                        <a href="#!" class="collection-item waves-effect">红色旅游</a>
+                                        <a href="#!" class="collection-item waves-effect">清凉大海</a>
+                                        <a href="#!" class="collection-item waves-effect">亲亲宝贝</a>
+                                        <a href="#!" class="collection-item waves-effect">温泉之旅</a>
+                                        <a href="#!" class="collection-item waves-effect">滑雪天堂</a>
+                                        <a href="#5活动推荐" class="collection-item active waves-effect waves-light pulse blue">活动推荐</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div id="5活动推荐" class="modal">
+                                <div class="modal-content">
+                                    <h5>活动推荐</h5>
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item waves-effect">[精品路线] 红色之旅旅顺、金石滩纯玩二日游</a>
+                                        <a href="#!" class="collection-item waves-effect">[优惠活动] 大连金石滩2018暑假特别优惠活动</a>
+                                        <a href="#!" class="collection-item waves-effect">[特价活动] 大连清明亲子春游好去处</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <li>
+                                <div class="collapsible-header">特色旅游</div>
+                                <div class="collapsible-body">
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item active waves-effect waves-light">热门类目</a>
+                                        <a href="#!" class="collection-item waves-effect">星海广场</a>
+                                        <a href="#!" class="collection-item waves-effect">金石滩</a>
+                                        <a href="#!" class="collection-item waves-effect">圣亚海洋世界</a>
+                                        <a href="#!" class="collection-item waves-effect">滨海路</a>
+                                        <a href="#!" class="collection-item waves-effect">植物园</a>
+                                        <a href="#!" class="collection-item waves-effect">动物园</a>
+                                        <a href="#6活动推荐" class="collection-item active waves-effect waves-light pulse blue">活动推荐</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div id="6活动推荐" class="modal">
+                                <div class="modal-content">
+                                    <h5>活动推荐</h5>
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item waves-effect">[精品路线]大连2015黄金海岸露营美食节</a>
+                                        <a href="#!" class="collection-item waves-effect">[优惠活动]冰峪沟特色活动之冰峪沟赏灯会</a>
+                                        <a href="#!" class="collection-item waves-effect">[特价活动]大连金石滩国际沙滩文化节</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <!--左菜单结束-->
+                    <div class="col s12 m9">
+                        <div class="col s12">
+                            <!--幻灯片-->
+                            <div class="card-panel indigo hoverable">
+                                <div class="slider">
+                                    <ul class="slides">
+                                        <li>
+                                            <img src="/static/img/1.jpg">
+                                            <!-- random image -->
+                                            <div class="caption center-align">
+                                                <h3>花花旅游在线</h3>
+                                                <h5 class="light grey-text text-lighten-3">花花带您游遍大连。</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="/static/img/2.jpg">
+                                            <!-- random image -->
+                                            <div class="caption left-align">
+                                                <h3>花花旅游在线</h3>
+                                                <h5 class="light grey-text text-lighten-3">花花带您游遍大连。</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="/static/img/3.jpg">
+                                            <!-- random image -->
+                                            <div class="caption right-align">
+                                                <h3>花花旅游在线</h3>
+                                                <h5 class="light grey-text text-lighten-3">花花带您游遍大连。</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="/static/img/4.jpg">
+                                            <!-- random image -->
+                                            <div class="caption center-align">
+                                                <h3>花花旅游在线</h3>
+                                                <h5 class="light grey-text text-lighten-3">花花带您游遍大连。</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--幻灯片结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--第零 row 结束-->
+    <!--第一 row-->
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel indigo lighten-3 hoverable">
+                <div class="row">
+                    <div id="快捷搜索" class="col s12 m3">
+                        <!--左搜索-->
+                        <div class="card-panel white hoverable">
+                            <div class="row">
+                                <span class="indigo-text">快捷搜索</span></div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field inline">
+                                        <input type="text">
+                                        <label>线路名称</label></div>
+                                    <div class="input-field inline">
+                                        <input type="text">
+                                        <label>目的地</label></div>
+                                    <div>行程天数</div>
+                                    <div class="input-field col s12">
+                                        <select>
+                        <option value="" disabled selected>请选择</option>
+                        <option value="1">不限</option>
+                        <option value="2">一日游</option>
+                        <option value="3">三日游</option>
+                        <option value="4">七日游</option>
+                        <option value="5">3 天内行程</option>
+                        <option value="6">7 天内行程</option>
+                        <option value="7">10 天内行程</option>
+                        <option value="8">11 天以上行程</option>
+                                        </select>
+                                    </div>
+                                    <div>起始日期</div>
+                                    <input type="date" class="datepicker">
+                                    <div>终止日期</div>
+                                    <input type="date" class="datepicker">
+                                    <a class="waves-effect waves-light btn">快速查找</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--左搜索结束-->
+                    <div class="col s12 m9">
+                        <div class="col s12">
+                            <!--资讯-->
+                            <div class="card-panel indigo hoverable">
+                                <div class="row">
+                                    <div class="col s12 m6">
+                                        <ul id="tabs-swipe-demo" class="tabs">
+                                            <li class="tab col s6">
+                                                <a class="active" href="#test-swipe-1">旅游快讯</a></li>
+                                            <li class="tab col s6">
+                                                <a href="#test-swipe-2">优惠活动</a></li>
+                                        </ul>
+                                        <div id="test-swipe-1" class="col s12 teal hoverable">
+                                            <div class="collection">
+                                                <a href="#!" class="collection-item waves-effect">2018大连发现王国成人年卡团购只需226元</a>
+                                                <a href="#!" class="collection-item waves-effect">2018星海广场大连啤酒节 等你来狂欢</a>
+                                                <a href="#!" class="collection-item waves-effect">7月27日-8月16日老虎滩表演活动时间安排</a>
+                                                <a href="#!" class="collection-item waves-effect">2018大连金石滩活动 蓝莓谷油画展和动漫水世界</a>
+                                                <a href="#!" class="collection-item waves-effect">2018大连金石滩活动 蓝莓谷油画展和动漫水世界</a>
+                                                <a href="#!" class="collection-item waves-effect">2018大连金石滩活动 蓝莓谷油画展和动漫水世界</a>
+                                                <a href="#!" class="collection-item waves-effect">2018大连金石滩活动 蓝莓谷油画展和动漫水世界</a></div>
+                                            <div id="test-swipe-2" class="col s12 blue hoverable">
+                                                <div class="collection">
+                                                    <a href="#!" class="collection-item waves-effect">2018大连8月1日金石滩狩猎场露营活动报名</a>
+                                                    <a href="#!" class="collection-item waves-effect">大连金石滩2018暑假特别优惠活动</a>
+                                                    <a href="#!" class="collection-item waves-effect">2018大连国际沙滩文化节游戏有奖活动</a>
+                                                    <a href="#!" class="collection-item waves-effect">发现王国2018精彩活动2018全新绽放</a>
+                                                    <a href="#!" class="collection-item waves-effect">发现王国2018精彩活动2018全新绽放</a>
+                                                    <a href="#!" class="collection-item waves-effect">发现王国2018精彩活动2018全新绽放</a>
+                                                    <a href="#!" class="collection-item waves-effect">发现王国2018精彩活动2018全新绽放</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m6">
+                                        <!--快捷搜索-->
+                                        <a class='dropdown-button btn col s12 m12' href='#' data-activates='dropdown1'>咨询</a>
+                                        <ul id='dropdown1' class='dropdown-content'>
+                                            <li>
+                                                <a href="#!">QQ 咨询</a></li>
+                                            <li>
+                                                <a href="#!">在线咨询</a></li>
+                                        </ul>
+                                        <ul class="collection hoverable">
+                                            <li class="collection-item avatar">
+                                                <img src="/static/img/c1.jpg" alt="" class="circle">
+                                                <span class="title">电话咨询</span><br />
+                                                <span class="new badge blue" data-badge-caption="">39588188</span>
+                                                <span class="new badge teal" data-badge-caption="">办公室</span>
+                                            </li>
+                                            <li class="collection-item avatar">
+                                                <i class="material-icons circle blue"></i>
+                                                <span class="title">电话咨询</span><br />
+                                                <span class="new badge blue" data-badge-caption="">13868885888</span>
+                                                <span class="new badge teal" data-badge-caption="">手机</span>
+                                            </li>
+                                            <li class="collection-item avatar">
+                                                <i class="material-icons circle green"></i>
+                                                <span class="title">QQ咨询</span><br />
+                                                <span class="new badge blue" data-badge-caption="">89546666</span>
+                                                <span class="new badge teal" data-badge-caption="">QQ</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--资讯结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--第一 row 结束-->
+    <!--第二 row-->
+    <div class="row">
+        <div id="精品推荐" class="col s12">
+            <div class="card-panel green hoverable">
+                <h5 class="white-text">精品推荐</h5>
+                <!--卡 1 row-->
+                <div class="row">
+                    <div class="col s12 m3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/c1.jpg">
+                                <span class="card-title">大连鸭绿江</span></div>
+                            <div class="card-content">
+                                <p>行程天数：2 天<span class="new badge blue" data-badge-caption="">￥280 起</span></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="waves-effect waves-light btn">查看详情</a></div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/c2.jpg">
+                                <span class="card-title">成园山庄温泉游</span></div>
+                            <div class="card-content">
+                                <p>行程天数：1 天<span class="new badge blue" data-badge-caption="">￥120 起</span></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="waves-effect waves-light btn">查看详情</a></div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/c3.jpg">
+                                <span class="card-title">大连老虎滩</span></div>
+                            <div class="card-content">
+                                <p>行程天数：1 天<span class="new badge blue" data-badge-caption="">￥320 起</span></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="waves-effect waves-light btn">查看详情</a></div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/c4.jpg">
+                                <span class="card-title">薰衣草庄园</span></div>
+                            <div class="card-content">
+                                <p>行程天数：1 天<span class="new badge blue" data-badge-caption="">￥80 起</span></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="waves-effect waves-light btn">查看详情</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!--卡 1 row 结束-->
+                <!--卡 2 row -->
+                <div class="row">
+                    <div class="col s12 m3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/c5.jpg">
+                                <span class="card-title">圣亚海洋世界</span></div>
+                            <div class="card-content">
+                                <p>行程天数：1 天<span class="new badge blue" data-badge-caption="">￥220 起</span></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="waves-effect waves-light btn">查看详情</a></div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/c6.jpg">
+                                <span class="card-title">金石滩</span></div>
+                            <div class="card-content">
+                                <p>行程天数：1 天<span class="new badge orange" data-badge-caption="">黄金海岸免费</span></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="waves-effect waves-light btn">查看详情</a></div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/c1.jpg">
+                                <span class="card-title">大连鸭绿江</span></div>
+                            <div class="card-content">
+                                <p>行程天数：2 天<span class="new badge blue" data-badge-caption="">￥280 起</span></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="waves-effect waves-light btn">查看详情</a></div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/c2.jpg">
+                                <span class="card-title">成园山庄温泉游</span></div>
+                            <div class="card-content">
+                                <p>行程天数：1 天<span class="new badge blue" data-badge-caption="">￥120 起</span></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#!" class="waves-effect waves-light btn">查看详情</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!--卡 2 row 结束-->
+            </div>
+        </div>
+    </div>
+    <!--第二 row 结束-->
+    <!--第三 row-->
+    <div class="row">
+        <div id="特色线路" class="col s12">
+            <div class="card-panel teal hoverable">
+                <h5 class="white-text">特色线路</h5>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card horizontal hoverable">
+                            <div class="card-image">
+                                <img src="/static/img/left.jpg" height="760">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="card horizontal hoverable">
+                                                <div class="card-image">
+                                                    <img src="/static/img/te1.jpg">
+                                                </div>
+                                                <div class="card-stacked">
+                                                    <div class="card-content">
+                                                        <div class="row">
+                                                            <div class="col s12 m9">
+                                                                <div class="collection hoverable">
+                                                                    <a href="#!" class="collection-item active waves-effect waves-light">大连唐风温泉门票</a>
+                                                                    <a href="#!" class="collection-item waves-effect">团期：10/20，10/21，10/22，10/23，10/24</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col s12 m3">
+                                                                <a class="waves-effect btn white right hoverable"><span class="black-text">一日游</span></a>
+                                                                <a class="waves-effect btn white right hoverable"><span class="black-text">大连市</span></a>
+                                                                <a class="waves-effect waves-light btn right hoverable">￥118起</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card horizontal hoverable">
+                                                <div class="card-image">
+                                                    <img src="/static/img/te2.jpg">
+                                                </div>
+                                                <div class="card-stacked">
+                                                    <div class="card-content">
+                                                        <div class="row">
+                                                            <div class="col s12 m9">
+                                                                <div class="collection hoverable">
+                                                                    <a href="#!" class="collection-item active waves-effect waves-light">大连市内纯玩一日游</a>
+                                                                    <a href="#!" class="collection-item waves-effect">团期：10/21，10/22，10/23，10/24，10/25</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col s12 m3">
+                                                                <a class="waves-effect btn white right hoverable"><span class="black-text">一日游</span></a>
+                                                                <a class="waves-effect btn white right hoverable"><span class="black-text">大连市</span></a>
+                                                                <a class="waves-effect waves-light btn right hoverable">￥340起</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card horizontal hoverable">
+                                                <div class="card-image">
+                                                    <img src="/static/img/te3.jpg">
+                                                </div>
+                                                <div class="card-stacked">
+                                                    <div class="card-content">
+                                                        <div class="row">
+                                                            <div class="col s12 m9">
+                                                                <div class="collection hoverable">
+                                                                    <a href="#!" class="collection-item active waves-effect waves-light">大连金石滩纯玩一日游</a>
+                                                                    <a href="#!" class="collection-item waves-effect">团期：10/20，10/21，10/22，10/23，10/24</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col s12 m3">
+                                                                <a class="waves-effect btn white right hoverable"><span class="black-text">一日游</span></a>
+                                                                <a class="waves-effect btn white right hoverable"><span class="black-text">大连市</span></a>
+                                                                <a class="waves-effect waves-light btn right hoverable">￥345起</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card horizontal hoverable">
+                                                <div class="card-image">
+                                                    <img src="/static/img/te4.jpg">
+                                                </div>
+                                                <div class="card-stacked">
+                                                    <div class="card-content">
+                                                        <div class="row">
+                                                            <div class="col s12 m9">
+                                                                <div class="collection hoverable">
+                                                                    <a href="#!" class="collection-item active waves-effect waves-light">大连旅顺一日游</a>
+                                                                    <a href="#!" class="collection-item waves-effect">团期：10/20，10/21，10/22，10/23，10/24</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col s12 m3">
+                                                                <a class="waves-effect btn white right hoverable"><span class="black-text">一日游</span></a>
+                                                                <a class="waves-effect btn white right hoverable"><span class="black-text">大连市</span></a>
+                                                                <a class="waves-effect waves-light btn right hoverable">￥300起</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--第三 row 结束-->
+    <!--第四 row-->
+    <div class="row">
+        <div id="友情链接" class="col s12">
+            <div class="card-panel indigo hoverable">
+                <h5 class="white-text">友情链接</h5>
+                <div class="row">
+                    <div class="col s1 offset-s2">
+                        <a href="#!" class="white-text waves-effect waves-light hoverable">
+                            <img src="/static/img/y1.gif">
+                            <p class="center-align">新浪微博</p>
+                        </a>
+                    </div>
+                    <div class="col s1">
+                        <a href="#!" class="white-text waves-effect waves-light hoverable">
+                            <img src="/static/img/y2.gif">
+                            <p class="center-align">开心网</p>
+                        </a>
+                    </div>
+                    <div class="col s1">
+                        <a href="#!" class="white-text waves-effect waves-light hoverable">
+                            <img src="/static/img/y3.gif">
+                            <p class="center-align">人人网</p>
+                        </a>
+                    </div>
+                    <div class="col s1">
+                        <a href="#!" class="white-text waves-effect waves-light hoverable">
+                            <img src="/static/img/y1.gif">
+                            <p class="center-align">新浪微博</p>
+                        </a>
+                    </div>
+                    <div class="col s1">
+                        <a href="#!" class="white-text waves-effect waves-light hoverable">
+                            <img src="/static/img/y2.gif">
+                            <p class="center-align">开心网</p>
+                        </a>
+                    </div>
+                    <div class="col s1">
+                        <a href="#!" class="white-text waves-effect waves-light hoverable">
+                            <img src="/static/img/y3.gif">
+                            <p class="center-align">人人网</p>
+                        </a>
+                    </div>
+                    <div class="col s1">
+                        <a href="#!" class="white-text waves-effect waves-light hoverable">
+                            <img src="/static/img/y1.gif">
+                            <p class="center-align">新浪微博</p>
+                        </a>
+                    </div>
+                    <div class="col s1">
+                        <a href="#!" class="white-text waves-effect waves-light hoverable">
+                            <img src="/static/img/y2.gif">
+                            <p class="center-align">开心网</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--第四 row 结束-->
+    <!--第五 row-->
+    <div class="row">
+        <div id="关于我们" class="col s12">
+            <footer class="page-footer brown darken-4 hoverable">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col s12 m3 hoverable">
+                            <h5 class="white-text">关于我们</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">花花介绍</a></li>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">招贤纳士</a></li>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">联系我们</a></li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m3 hoverable">
+                            <h5 class="white-text">合作伙伴</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">国家旅游局</a></li>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">人民网旅游</a></li>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">光明网旅游</a></li>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">央视网旅游</a></li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m3 hoverable">
+                            <h5 class="white-text">旅游常识</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">如何办理护照</a></li>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">如何办理旅游签证</a></li>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">如何办理港澳通行证</a></li>
+                                <li><a class="grey-text text-lighten-3 waves-effect waves-light" href="#!">如何办理台湾旅游签证</a></li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m3 hoverable">
+                            <h5 class="white-text">关注我们</h5>
+                            <img src="/static/img/qr.png" height="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        Copyright © 2018 Wiken
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!--第五 row 结束-->
+</body>
+
+</html>

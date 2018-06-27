@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+        <title>首页 - 轻淘宝</title>
+        <meta name="description" content="轻量而简洁的淘宝搜索" />
+        <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css" media="screen,projection" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://wiken.app/static/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /></head>
+    
+    <body>
+        <nav class="orange darken-4">
+            <div class="nav-wrapper">
+                <a href="http://wiken.app" class="brand-logo center waves-effect waves-light"><i class="material-icons">shopping_cart</i>轻淘宝</a>
+                <ul id="nav-mobile" class="left">
+                    <li>
+                        <a href="http://wiken.app" class="waves-effect waves-light">首页</a></li>
+                </ul>
+                <ul id="nav-mobile" class="right">
+                    <li>
+                        <a href="http://wiken.top" target="_blank" class="waves-effect waves-light">博客</a></li>
+                    <li>
+                        <a href="https://github.com/7310C7310C" target="_blank" class="waves-effect waves-light">GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel indigo lighten-5 hoverable">
+                    <div class="row">
+                        <form class="col s12" action="{{ url_for('results') }}" method="post">
+                            <div class="row">
+                                <div class="input-field col s12 m8 offset-m2 l6 offset-l3">
+                                    <input id="keyword_orUrl" type="text" name="keyword_orUrl" class="validate">
+                                    <label for="keyword_orUrl">请输入关键词</label>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">搜索
+                                        <i class="material-icons right">search</i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
