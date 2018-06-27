@@ -9,11 +9,6 @@ def getCode(url, headers):
     r.encoding = 'utf-8'
     return r.text
 
-# def clever_function():
-    # return u'HELLO'
-
-# app.jinja_env.globals.update(clever_function=clever_function)
-
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -26,12 +21,11 @@ def results():
     keyword_orUrl = request.form.get("keyword_orUrl")
     if keyword_orUrl.startswith('https://'):
         splited = keyword_orUrl.split('&s=')
-        url = splited[0] + '&s=' + str(int(splited[1])+44) # and so on
+        url = splited[0] + '&s=' + str(int(splited[1])+44)
         code = getCode(url, headers)
     else:
         keyword = keyword_orUrl
         url = 'https://s.taobao.com/search?q=' + keyword + '&cd=false&s=0'
-    # s_value_current = int(url[url.index('s=')+2:])
         code = getCode(url, headers)
     
     pic_url = re.findall(r'"pic_url":"([^"]+)"', code, re.I)
