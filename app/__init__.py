@@ -30,18 +30,21 @@ def results():
     
     pic_url = re.findall(r'"pic_url":"([^"]+)"', code, re.I)
     detail_url = re.findall(r'"detail_url":"([^"]+)"', code, re.I)
-    for i in range(len(detail_url)):
+    for i, v in enumerate(detail_url):
         if detail_url[i].startswith("https:"):
             detail_url[i] = detail_url[i][6:]
         detail_url[i] = detail_url[i].encode('utf-8').decode('unicode_escape')
     
     shopLink = re.findall(r'"shopLink":"([^"]+)"', code, re.I)
-    for i in range(len(shopLink)):
+    for i, v in enumerate(shopLink):
         if shopLink[i].startswith("https:"):
             shopLink[i] = shopLink[i][6:]
         shopLink[i] = shopLink[i].encode('utf-8').decode('unicode_escape')
         
     title = re.findall(r'"raw_title":"([^"]+)"', code, re.I)
+    for i, v in enumerate(title):
+        title[i] = title[i].encode('raw-unicode-escape').decode('unicode_escape')
+    
     price = re.findall(r'"view_price":"([^"]+)"', code, re.I)    
     sales = re.findall(r'"view_sales":"([^"]+)"', code, re.I)
     shop = re.findall(r'"nick":"([^"]+)"', code, re.I)
